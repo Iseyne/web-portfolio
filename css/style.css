@@ -1,6 +1,7 @@
 :root {
     --color-primary: #f97316;
     --color-primary-hover: #ea580c;
+    --color-primary-light: #fff7ed;
 
     --color-background: #ffffff;
     --color-surface: #ffffff;
@@ -10,6 +11,7 @@
     --color-text-muted: #6b7280;
 
     --color-border: #e5e7eb;
+    --color-shadow: rgba(17, 24, 39, 0.06);
 }
 
 html {
@@ -22,10 +24,34 @@ body {
     color: var(--color-text);
 }
 
+a {
+    color: var(--color-primary);
+}
 
-a,
-button {
-    transition: color 0.2s ease,
-                background-color 0.2s ease,
-                border-color 0.2s ease;
+a:hover {
+    color: var(--color-primary-hover);
+}
+
+.theme-surface {
+    background-color: var(--color-surface);
+}
+
+.theme-surface-secondary {
+    background-color: var(--color-surface-secondary);
+}
+
+.theme-text {
+    color: var(--color-text);
+}
+
+.theme-text-muted {
+    color: var(--color-text-muted);
+}
+
+.theme-border {
+    border-color: var(--color-border);
+}
+
+.theme-accent {
+    color: var(--color-primary);
 }
