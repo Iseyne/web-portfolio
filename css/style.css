@@ -1,0 +1,31 @@
+:root {
+    --color-primary: #f97316;
+    --color-primary-hover: #ea580c;
+
+    --color-background: #ffffff;
+    --color-surface: #ffffff;
+    --color-surface-secondary: #f9fafb;
+
+    --color-text: #111827;
+    --color-text-muted: #6b7280;
+
+    --color-border: #e5e7eb;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+
+a,
+button {
+    transition: color 0.2s ease,
+                background-color 0.2s ease,
+                border-color 0.2s ease;
+}
