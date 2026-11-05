@@ -1,0 +1,63 @@
+:root {
+  --color-primary: #f97316;
+  --color-primary-hover: #ea580c;
+  --color-primary-light: #fff7ed;
+
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-secondary: #f9fafb;
+
+  --color-text: #111827;
+  --color-text-muted: #6b7280;
+
+  --color-border: #e5e7eb;
+  --color-shadow: rgba(17, 24, 39, 0.06);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-primary);
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+.theme-surface {
+  background-color: var(--color-surface);
+}
+
+.theme-surface-secondary {
+  background-color: var(--color-surface-secondary);
+}
+
+.theme-text {
+  color: var(--color-text);
+}
+
+.theme-text-muted {
+  color: var(--color-text-muted);
+}
+
+.theme-border {
+  border-color: var(--color-border);
+}
+
+.theme-accent {
+  color: var(--color-primary);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
