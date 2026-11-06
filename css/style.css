@@ -76,12 +76,14 @@ a:focus-visible {
   box-shadow: 0 2px 8px var(--color-shadow);
   transition:
     transform 200ms ease,
-    box-shadow 200ms ease;
+    box-shadow 200ms ease,
+    border-color 200ms ease;
 }
 
 .skill-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 16px var(--color-shadow);
+  border-color: #fdba74;
 }
 
 .skill-badges {
@@ -98,14 +100,47 @@ a:focus-visible {
   background-color: var(--color-primary-light);
   color: var(--color-primary-hover);
   font-weight: 500;
+  box-shadow: 0 1px 3px var(--color-shadow);
   transition:
+    transform 200ms ease,
     background-color 200ms ease,
     color 200ms ease,
-    border-color 200ms ease;
+    border-color 200ms ease,
+    box-shadow 200ms ease;
 }
 
 .skill-badge:hover {
+  transform: translateY(-2px);
   background-color: var(--color-primary);
   border-color: var(--color-primary);
   color: #ffffff;
+  box-shadow: 0 4px 8px var(--color-shadow);
+}
+
+.skill-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.skill-card h3::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 1.4em;
+  flex-shrink: 0;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-card,
+  .skill-badge {
+    transition: none;
+  }
+
+  .skill-card:hover,
+  .skill-badge:hover {
+    transform: none;
+  }
 }
