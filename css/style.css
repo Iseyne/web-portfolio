@@ -143,3 +143,19 @@ body:has(#contacts:target) nav a[href="#contacts"] {
   font-size: 0.875rem;
   font-weight: 500;
 }
+
+label:has(#theme-toggle:not(:checked)) img[src*="sun"] {
+  opacity: 1;
+}
+
+label:has(#theme-toggle:not(:checked)) img[src*="moon"] {
+  opacity: 0.4;
+}
+
+label:has(#theme-toggle:checked) img[src*="sun"] {
+  opacity: 0.4;
+}
+
+label:has(#theme-toggle:checked) img[src*="moon"] {
+  opacity: 1;
+}
