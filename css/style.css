@@ -26,6 +26,7 @@ html {
   --color-shadow: rgba(41, 37, 36, 0.07);
   --color-grid: rgba(41, 37, 36, 0.035);
   --color-glow: rgba(249, 115, 22, 0.055);
+  --grid-image: url("../assets/images/grid.svg");
 }
 
 :root:has(#theme-toggle:checked) {
@@ -46,6 +47,7 @@ html {
   --color-shadow: rgba(0, 0, 0, 0.2);
   --color-grid: rgba(255, 255, 255, 0.025);
   --color-glow: rgba(251, 146, 60, 0.07);
+  --grid-image: url("../assets/images/grid-dark.svg");
 }
 
 html {
@@ -69,22 +71,16 @@ body:has(#contacts:target) nav a[href="#contacts"] {
 
 body {
   background-image:
-    radial-gradient(ellipse at top left, var(--color-glow), transparent 45%),
-    radial-gradient(
-      ellipse at bottom right,
-      var(--color-glow),
-      transparent 45%
-    ),
-    linear-gradient(to right, var(--color-grid) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--color-grid) 1px, transparent 1px);
+    radial-gradient(circle at top left, var(--color-glow), transparent 40%),
+    radial-gradient(circle at bottom right, var(--color-glow), transparent 40%),
+    var(--grid-image);
 
   background-size:
     100% 100%,
     100% 100%,
-    40px 40px,
     40px 40px;
 
-  background-attachment: fixed;
+  background-repeat: no-repeat, no-repeat, repeat;
 }
 
 .skills-grid {
