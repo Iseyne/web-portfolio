@@ -55,6 +55,14 @@ a:focus-visible {
   border-radius: 2px;
 }
 
+body:has(#about:target) nav a[href="#about"],
+body:has(#skills:target) nav a[href="#skills"],
+body:has(#projects:target) nav a[href="#projects"],
+body:has(#contacts:target) nav a[href="#contacts"] {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
