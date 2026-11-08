@@ -1,7 +1,19 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 :root {
   --color-primary: #f97316;
   --color-primary-hover: #ea580c;
   --color-primary-light: #fff7ed;
+  --color-primary-border: #fed7aa;
+  --color-primary-contrast: #ffffff;
 
   --color-background: #ffffff;
   --color-surface: #ffffff;
@@ -14,52 +26,41 @@
   --color-shadow: rgba(17, 24, 39, 0.06);
 }
 
+:root:has(#theme-toggle:checked) {
+  --color-primary: #fb923c;
+  --color-primary-hover: #fdba74;
+  --color-primary-light: #431f0b;
+  --color-primary-border: #9a3412;
+  --color-primary-contrast: #111827;
+
+  --color-background: #111827;
+  --color-surface: #1f2937;
+  --color-surface-secondary: #0f172a;
+
+  --color-text: #f9fafb;
+  --color-text-muted: #9ca3af;
+
+  --color-border: #374151;
+  --color-shadow: rgba(0, 0, 0, 0.25);
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
-}
-
-body {
-  background-color: var(--color-background);
-  color: var(--color-text);
-}
-
-a {
-  color: var(--color-primary);
-}
-
-a:hover {
-  color: var(--color-primary-hover);
-}
-
-.theme-surface {
-  background-color: var(--color-surface);
-}
-
-.theme-surface-secondary {
-  background-color: var(--color-surface-secondary);
-}
-
-.theme-text {
-  color: var(--color-text);
-}
-
-.theme-text-muted {
-  color: var(--color-text-muted);
-}
-
-.theme-border {
-  border-color: var(--color-border);
-}
-
-.theme-accent {
-  color: var(--color-primary);
 }
 
 a:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 4px;
   border-radius: 2px;
+}
+
+body:has(#about:target) nav a[href="#about"],
+body:has(#skills:target) nav a[href="#skills"],
+body:has(#projects:target) nav a[href="#projects"],
+body:has(#contacts:target) nav a[href="#contacts"] {
+  color: var(--color-primary);
+  font-weight: 600;
 }
 
 .skills-grid {
@@ -85,16 +86,10 @@ a:focus-visible {
   box-shadow: 0 6px 16px var(--color-shadow);
 }
 
-.skill-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
 .skill-badge {
   display: inline-block;
   padding: 0.5rem 1rem;
-  border: 1px solid #fed7aa;
+  border: 1px solid var(--color-primary-border);
   border-radius: 0.5rem;
   background-color: var(--color-primary-light);
   color: var(--color-primary-hover);
@@ -112,7 +107,7 @@ a:focus-visible {
   transform: translateY(-2px);
   background-color: var(--color-primary);
   border-color: var(--color-primary);
-  color: #ffffff;
+  color: var(--color-primary-contrast);
   box-shadow: 0 4px 8px var(--color-shadow);
 }
 
@@ -141,10 +136,26 @@ a:focus-visible {
 .project-badge {
   display: inline-block;
   padding: 0.3rem 0.75rem;
-  border: 1px solid #fed7aa;
+  border: 1px solid var(--color-primary-border);
   border-radius: 0.5rem;
   background-color: var(--color-primary-light);
   color: var(--color-primary-hover);
   font-size: 0.875rem;
   font-weight: 500;
+}
+
+label:has(#theme-toggle:not(:checked)) img[src*="sun"] {
+  opacity: 1;
+}
+
+label:has(#theme-toggle:not(:checked)) img[src*="moon"] {
+  opacity: 0.4;
+}
+
+label:has(#theme-toggle:checked) img[src*="sun"] {
+  opacity: 0.4;
+}
+
+label:has(#theme-toggle:checked) img[src*="moon"] {
+  opacity: 1;
 }
