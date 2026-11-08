@@ -2,6 +2,8 @@
   --color-primary: #f97316;
   --color-primary-hover: #ea580c;
   --color-primary-light: #fff7ed;
+  --color-primary-border: #fed7aa;
+  --color-primary-contrast: #ffffff;
 
   --color-background: #ffffff;
   --color-surface: #ffffff;
@@ -17,43 +19,6 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
-}
-
-body {
-  background-color: var(--color-background);
-  color: var(--color-text);
-}
-
-a {
-  color: var(--color-primary);
-}
-
-a:hover {
-  color: var(--color-primary-hover);
-}
-
-.theme-surface {
-  background-color: var(--color-surface);
-}
-
-.theme-surface-secondary {
-  background-color: var(--color-surface-secondary);
-}
-
-.theme-text {
-  color: var(--color-text);
-}
-
-.theme-text-muted {
-  color: var(--color-text-muted);
-}
-
-.theme-border {
-  border-color: var(--color-border);
-}
-
-.theme-accent {
-  color: var(--color-primary);
 }
 
 a:focus-visible {
@@ -85,16 +50,10 @@ a:focus-visible {
   box-shadow: 0 6px 16px var(--color-shadow);
 }
 
-.skill-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
 .skill-badge {
   display: inline-block;
   padding: 0.5rem 1rem;
-  border: 1px solid #fed7aa;
+  border: 1px solid var(--color-primary-border);
   border-radius: 0.5rem;
   background-color: var(--color-primary-light);
   color: var(--color-primary-hover);
@@ -112,7 +71,7 @@ a:focus-visible {
   transform: translateY(-2px);
   background-color: var(--color-primary);
   border-color: var(--color-primary);
-  color: #ffffff;
+  color: var(--color-primary-contrast);
   box-shadow: 0 4px 8px var(--color-shadow);
 }
 
@@ -141,7 +100,7 @@ a:focus-visible {
 .project-badge {
   display: inline-block;
   padding: 0.3rem 0.75rem;
-  border: 1px solid #fed7aa;
+  border: 1px solid var(--color-primary-border);
   border-radius: 0.5rem;
   background-color: var(--color-primary-light);
   color: var(--color-primary-hover);
