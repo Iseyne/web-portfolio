@@ -11,19 +11,21 @@ html {
 :root {
   --color-primary: #f97316;
   --color-primary-hover: #ea580c;
-  --color-primary-light: #fff7ed;
-  --color-primary-border: #fed7aa;
+  --color-primary-light: #fceee2;
+  --color-primary-border: #edc9aa;
   --color-primary-contrast: #ffffff;
 
-  --color-background: #ffffff;
-  --color-surface: #ffffff;
-  --color-surface-secondary: #f9fafb;
+  --color-background: #f0efed;
+  --color-surface: #eeece8;
+  --color-surface-secondary: #e7e5e0;
 
-  --color-text: #111827;
-  --color-text-muted: #6b7280;
+  --color-text: #292724;
+  --color-text-muted: #78736c;
 
-  --color-border: #e5e7eb;
-  --color-shadow: rgba(17, 24, 39, 0.06);
+  --color-border: #d8d5cf;
+  --color-shadow: rgba(41, 37, 36, 0.07);
+  --color-grid: rgba(41, 37, 36, 0.035);
+  --color-glow: rgba(249, 115, 22, 0.055);
 }
 
 :root:has(#theme-toggle:checked) {
@@ -33,15 +35,17 @@ html {
   --color-primary-border: #9a3412;
   --color-primary-contrast: #111827;
 
-  --color-background: #111827;
-  --color-surface: #1f2937;
-  --color-surface-secondary: #0f172a;
+  --color-background: #191919;
+  --color-surface: #222222;
+  --color-surface-secondary: #1d1d1d;
 
-  --color-text: #f9fafb;
-  --color-text-muted: #9ca3af;
+  --color-text: #dedbd8;
+  --color-text-muted: #a3a3a3;
 
-  --color-border: #374151;
-  --color-shadow: rgba(0, 0, 0, 0.25);
+  --color-border: #383838;
+  --color-shadow: rgba(0, 0, 0, 0.2);
+  --color-grid: rgba(255, 255, 255, 0.025);
+  --color-glow: rgba(251, 146, 60, 0.07);
 }
 
 html {
@@ -61,6 +65,26 @@ body:has(#projects:target) nav a[href="#projects"],
 body:has(#contacts:target) nav a[href="#contacts"] {
   color: var(--color-primary);
   font-weight: 600;
+}
+
+body {
+  background-image:
+    radial-gradient(ellipse at top left, var(--color-glow), transparent 45%),
+    radial-gradient(
+      ellipse at bottom right,
+      var(--color-glow),
+      transparent 45%
+    ),
+    linear-gradient(to right, var(--color-grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-grid) 1px, transparent 1px);
+
+  background-size:
+    100% 100%,
+    100% 100%,
+    40px 40px,
+    40px 40px;
+
+  background-attachment: fixed;
 }
 
 .skills-grid {
