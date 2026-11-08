@@ -16,6 +16,24 @@
   --color-shadow: rgba(17, 24, 39, 0.06);
 }
 
+:root:has(#theme-toggle:checked) {
+  --color-primary: #fb923c;
+  --color-primary-hover: #fdba74;
+  --color-primary-light: #431f0b;
+  --color-primary-border: #9a3412;
+  --color-primary-contrast: #111827;
+
+  --color-background: #111827;
+  --color-surface: #1f2937;
+  --color-surface-secondary: #0f172a;
+
+  --color-text: #f9fafb;
+  --color-text-muted: #9ca3af;
+
+  --color-border: #374151;
+  --color-shadow: rgba(0, 0, 0, 0.25);
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
