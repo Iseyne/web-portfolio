@@ -83,7 +83,6 @@ a:focus-visible {
 .skill-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 16px var(--color-shadow);
-  border-color: #fdba74;
 }
 
 .skill-badges {
@@ -133,14 +132,19 @@ a:focus-visible {
   border-radius: 2px;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .skill-card,
-  .skill-badge {
-    transition: none;
-  }
+.project-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
 
-  .skill-card:hover,
-  .skill-badge:hover {
-    transform: none;
-  }
+.project-badge {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid #fed7aa;
+  border-radius: 0.5rem;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-hover);
+  font-size: 0.875rem;
+  font-weight: 500;
 }
