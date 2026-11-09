@@ -34,64 +34,23 @@
   </head>
   <body class="bg-background text-text font-sans antialiased">
     <div id="top"></div>
-    <header
-      class="sticky top-0 z-50 bg-surface backdrop-blur-sm border-b border-border"
-    >
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center">
-          <h1 class="text-2xl font-bold text-primary">Овечкин Андрей</h1>
-          <nav>
-            <ul class="flex flex-wrap items-center gap-x-3 gap-y-2 sm:gap-x-6">
-              <li>
-                <a
-                  href="#about"
-                  class="text-muted hover:text-primary-hover transition-colors duration-200"
-                >
-                  Обо мне
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#skills"
-                  class="text-muted hover:text-primary-hover transition-colors duration-200"
-                >
-                  Навыки
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#projects"
-                  class="text-muted hover:text-primary-hover transition-colors duration-200"
-                >
-                  Проекты
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contacts"
-                  class="text-muted hover:text-primary-hover transition-colors duration-200"
-                >
-                  Контакты
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <label
-            for="theme-toggle"
-            class="flex items-center gap-1.5 sm:gap-2 cursor-pointer select-none shrink-0"
-          >
-            <span class="text-sm text-muted">Тема</span>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <div class="site-header__top">
+          <a href="#top" class="site-header__logo"> Iseyne<span>.</span> </a>
+
+          <label for="theme-toggle" class="site-header__theme">
+            <span class="site-header__theme-label">Тема</span>
 
             <img
               src="assets/icons/sun.svg"
               alt=""
-              class="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-opacity duration-200 shrink-0"
+              class="site-header__theme-icon"
               aria-hidden="true"
             />
 
-            <span
-              class="relative w-11 h-6 rounded-full bg-primary-light border border-primary-border transition-colors duration-200 peer-checked:bg-primary peer-checked:border-primary"
-            >
+            <span class="site-header__switch">
               <input
                 type="checkbox"
                 id="theme-toggle"
@@ -99,58 +58,94 @@
                 aria-label="Включить тёмную тему"
               />
 
-              <span
-                class="absolute left-1 top-1 w-4 h-4 rounded-full bg-primary transition-all duration-200 peer-checked:translate-x-5 peer-checked:bg-primary-contrast peer-focus-visible:ring-2 peer-focus-visible:ring-primary peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-background"
-              ></span>
+              <span class="site-header__switch-thumb"></span>
             </span>
 
             <img
               src="assets/icons/moon.svg"
               alt=""
-              class="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-opacity duration-200 shrink-0"
+              class="site-header__theme-icon"
               aria-hidden="true"
             />
           </label>
         </div>
+
+        <nav class="site-header__nav" aria-label="Основная навигация">
+          <ul>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#skills">Навыки</a></li>
+            <li><a href="#projects">Проекты</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
     <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <section id="about" class="mb-16">
-        <div
-          class="flex flex-col md:flex-row items-center md:items-start gap-8"
-        >
-          <div class="flex-shrink-0">
-            <img
-              src="assets/images/photo.jpg"
-              alt="Фото Овечкина Андрея"
-              class="rounded-full w-48 h-48 object-cover shadow-md border-4 border-primary"
-            />
+        <div class="about-card">
+          <div class="about-card__photo">
+            <img src="assets/images/photo.jpg" alt="Фото Овечкина Андрея" />
           </div>
 
-          <div class="flex-1">
-            <h2 class="text-3xl font-bold mb-4 text-primary">Обо мне</h2>
-            <p class="text-lg mb-2">
-              <strong>ФИО:</strong> Овечкин Андрей Максимович
-            </p>
-            <p class="text-lg mb-2">
-              <strong>Место учёбы:</strong> СПбГУ, Математико-механический
-              факультет, кафедра системного программирования
-            </p>
-            <p class="text-lg mb-2">
-              <strong>Интересы и увлечения:</strong> Программирование, Музыка,
-              Туризм, Волейбол
+          <div class="about-card__content">
+            <span class="about-card__label">Обо мне</span>
+
+            <h2 class="about-card__title">Овечкин Андрей Максимович</h2>
+
+            <p class="about-card__education">
+              Студент СПбГУ, Математико-механический факультет, кафедра
+              системного программирования
             </p>
 
-            <h3 class="text-xl font-semibold mb-2">Краткая биография</h3>
-            <p class="text-muted leading-relaxed">
-              Приехал с юга России учиться системному программированию в СПбГУ.
-              Имею небольшой опыт участия в различных проектах и соревнованиях
-              (ICPC, Начни Игру, РуКод, Технокубок и т.д.). Начал
-              программировать в 2022 году и в тот же год стал увлекаться
-              туризмом и путешествиями. За спиной также 7 лет музыкалки и 11 лет
-              спорта.
-            </p>
+            <div class="about-card__interests">
+              <span>СПбГУ</span>
+              <span>Системное программирование</span>
+              <span>Музыка</span>
+              <span>Тхэквондо</span>
+              <span>Туризм</span>
+              <span>Волейбол</span>
+            </div>
+
+            <div class="about-card__divider"></div>
+
+            <div class="about-card__bio">
+              <h3>Краткая биография</h3>
+
+              <p>
+                Приехал с юга России учиться системному программированию в
+                СПбГУ. Имею небольшой опыт участия в различных проектах и
+                соревнованиях (ICPC, Начни Игру, РуКод, Технокубок и т.д.).
+                Начал программировать в 2022 году и в тот же год стал увлекаться
+                туризмом и путешествиями. За спиной также 7 лет музыкалки и 11
+                лет спорта.
+              </p>
+            </div>
+
+            <div class="about-card__links">
+              <a
+                href="https://github.com/Iseyne"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="about-card__link"
+              >
+                <img src="assets/icons/github.svg" alt="" aria-hidden="true" />
+                GitHub
+              </a>
+
+              <a
+                href="https://t.me/oamstrawberry"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="about-card__link"
+              >
+                <img
+                  src="assets/icons/telegram.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                Telegram
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -196,10 +191,7 @@
         </div>
       </section>
 
-      <section
-        id="projects"
-        class="py-20 bg-surface-secondary border-t border-border"
-      >
+      <section id="projects" class="py-20 border-t border-border">
         <h2 class="text-3xl font-bold mb-8 text-center text-primary">
           Мои проекты
         </h2>
@@ -284,66 +276,34 @@
           </div>
         </div>
       </section>
-
-      <section id="contacts" class="py-20 border-t border-border">
-        <h2 class="text-3xl font-bold mb-8 text-center text-primary">
-          Контакты
-        </h2>
-        <div
-          class="max-w-md mx-auto bg-surface p-8 rounded-lg shadow-md border border-border"
-        >
-          <ul class="space-y-4">
-            <li class="flex items-center">
-              <span class="font-semibold mr-2">Email (личный):</span>
-              <a
-                href="mailto:andryu.ovechkin@gmail.com"
-                class="text-primary hover:underline"
-                >andryu.ovechkin@gmail.com</a
-              >
-            </li>
-            <li class="flex items-center">
-              <span class="font-semibold mr-2">Email (рабочий):</span>
-              <a
-                href="mailto:st140541@student.spbu.ru"
-                class="text-primary hover:underline"
-                >st140541@student.spbu.ru</a
-              >
-            </li>
-            <li class="flex items-center">
-              <span class="font-semibold mr-2">Telegram:</span>
-              <a
-                href="https://t.me/oamstrawberry"
-                class="text-primary hover:underline"
-                >@oamstrawberry</a
-              >
-            </li>
-            <li class="flex items-center">
-              <span class="font-semibold mr-2">GitHub:</span>
-              <a
-                href="https://github.com/Iseyne"
-                class="text-primary hover:underline"
-                >github.com/Iseyne</a
-              >
-            </li>
-          </ul>
-        </div>
-      </section>
     </main>
 
-    <footer class="bg-surface-secondary py-6">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <p class="text-center text-muted">
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__contacts">
+          <p>
+            <span>Личная:</span>
+            <a href="mailto:andryu.ovechkin@gmail.com">
+              andryu.ovechkin@gmail.com
+            </a>
+          </p>
+
+          <p>
+            <span>Университетская:</span>
+            <a href="mailto:st140541@student.spbu.ru">
+              st140541@student.spbu.ru
+            </a>
+          </p>
+        </div>
+
+        <p class="site-footer__copyright">
           &copy; 2026 Овечкин Андрей. Все права защищены.
         </p>
 
-        <div class="text-center mt-3">
-          <a
-            href="#top"
-            class="text-primary hover:underline transition-colors duration-200"
-          >
-            ↑ Наверх
-          </a>
-        </div>
+        <a href="#top" class="site-footer__back-to-top">
+          <span>Наверх</span>
+          <span aria-hidden="true">↑</span>
+        </a>
       </div>
     </footer>
   </body>
