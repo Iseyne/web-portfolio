@@ -34,64 +34,23 @@
   </head>
   <body class="bg-background text-text font-sans antialiased">
     <div id="top"></div>
-    <header
-      class="sticky top-0 z-50 bg-surface backdrop-blur-sm border-b border-border"
-    >
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center">
-          <h1 class="text-2xl font-bold text-primary">Овечкин Андрей</h1>
-          <nav>
-            <ul class="flex flex-wrap items-center gap-x-3 gap-y-2 sm:gap-x-6">
-              <li>
-                <a
-                  href="#about"
-                  class="text-muted hover:text-primary-hover transition-colors duration-200"
-                >
-                  Обо мне
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#skills"
-                  class="text-muted hover:text-primary-hover transition-colors duration-200"
-                >
-                  Навыки
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#projects"
-                  class="text-muted hover:text-primary-hover transition-colors duration-200"
-                >
-                  Проекты
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contacts"
-                  class="text-muted hover:text-primary-hover transition-colors duration-200"
-                >
-                  Контакты
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <label
-            for="theme-toggle"
-            class="flex items-center gap-1.5 sm:gap-2 cursor-pointer select-none shrink-0"
-          >
-            <span class="text-sm text-muted">Тема</span>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <div class="site-header__top">
+          <a href="#top" class="site-header__logo"> Iseyne<span>.</span> </a>
+
+          <label for="theme-toggle" class="site-header__theme">
+            <span class="site-header__theme-label">Тема</span>
 
             <img
               src="assets/icons/sun.svg"
               alt=""
-              class="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-opacity duration-200 shrink-0"
+              class="site-header__theme-icon"
               aria-hidden="true"
             />
 
-            <span
-              class="relative w-11 h-6 rounded-full bg-primary-light border border-primary-border transition-colors duration-200 peer-checked:bg-primary peer-checked:border-primary"
-            >
+            <span class="site-header__switch">
               <input
                 type="checkbox"
                 id="theme-toggle"
@@ -99,19 +58,26 @@
                 aria-label="Включить тёмную тему"
               />
 
-              <span
-                class="absolute left-1 top-1 w-4 h-4 rounded-full bg-primary transition-all duration-200 peer-checked:translate-x-5 peer-checked:bg-primary-contrast peer-focus-visible:ring-2 peer-focus-visible:ring-primary peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-background"
-              ></span>
+              <span class="site-header__switch-thumb"></span>
             </span>
 
             <img
               src="assets/icons/moon.svg"
               alt=""
-              class="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-opacity duration-200 shrink-0"
+              class="site-header__theme-icon"
               aria-hidden="true"
             />
           </label>
         </div>
+
+        <nav class="site-header__nav" aria-label="Основная навигация">
+          <ul>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#skills">Навыки</a></li>
+            <li><a href="#projects">Проекты</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
